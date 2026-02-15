@@ -27,11 +27,13 @@ public class TaskService {
     private final TaskRepository taskRepository;
     private final TaskMapper taskMapper;
 
+    @Transactional(readOnly = true)
     public Page<Task> getAllTasks(TaskFilterDto filter, Pageable pageable) {
         Specification<Task> spec = Specification.where(TaskSpecification.hasStatus(filter.status()));
         return taskRepository.findAll(spec, pageable);
     }
 
+    @Transactional(readOnly = true)
     public Task getTaskById(UUID id) {
         return taskRepository.findById(id).orElseThrow(() ->
                 new EntityNotFoundException("Задача с " + id + " не найдена"));
@@ -61,10 +63,10 @@ public class TaskService {
 
     @Transactional
     public void deleteTask(UUID id) {
-        if (!taskRepository.existsById(id)) {
-            throw new EntityNotFoundException("Задача с id " + id + " не найдена");
-        }
-        taskRepository.deleteById(id);
+        Task task = taskRepository.findById(id).orElseThrow(() ->
+                new EntityNotFoundException("Задача с " + id + " не найдена")
+        );
+        taskRepository.delete(task);
     }
 
 }
