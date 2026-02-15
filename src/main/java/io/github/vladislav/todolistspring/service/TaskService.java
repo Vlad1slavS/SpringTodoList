@@ -4,7 +4,7 @@ import io.github.vladislav.todolistspring.dto.tasks.TaskDto;
 import io.github.vladislav.todolistspring.dto.tasks.TaskFilterDto;
 import io.github.vladislav.todolistspring.dto.tasks.TaskPatchDto;
 import io.github.vladislav.todolistspring.entity.Task;
-import io.github.vladislav.todolistspring.entity.TaskSpecification;
+import io.github.vladislav.todolistspring.specification.TaskSpecification;
 import io.github.vladislav.todolistspring.enums.TaskStatus;
 import io.github.vladislav.todolistspring.mapper.TaskMapper;
 import io.github.vladislav.todolistspring.repository.TaskRepository;

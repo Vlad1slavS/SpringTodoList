@@ -1,5 +1,6 @@
-package io.github.vladislav.todolistspring.entity;
+package io.github.vladislav.todolistspring.specification;
 
+import io.github.vladislav.todolistspring.entity.Task;
 import io.github.vladislav.todolistspring.enums.TaskStatus;
 import lombok.experimental.UtilityClass;
 import org.springframework.data.jpa.domain.Specification;
