@@ -17,6 +17,9 @@ import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
+/**
+ * @author Степанов Владислав
+ */
 @Slf4j
 @RestControllerAdvice
 public class GlobalExceptionHandler {

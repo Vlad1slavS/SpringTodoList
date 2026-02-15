@@ -9,6 +9,9 @@ import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
 import org.mapstruct.NullValuePropertyMappingStrategy;
 
+/**
+ * @author Степанов Владислав
+ */
 @Mapper(componentModel = "spring")
 public interface TaskMapper {
 

@@ -18,6 +18,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.UUID;
 
+/**
+ * @author Степанов Владислав
+ */
 @Service
 @RequiredArgsConstructor
 public class TaskService {

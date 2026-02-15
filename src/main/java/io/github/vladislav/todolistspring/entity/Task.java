@@ -20,6 +20,9 @@ import java.time.LocalDate;
 import java.util.Objects;
 import java.util.UUID;
 
+/**
+ * @author Степанов Владислав
+ */
 @Entity
 @Table(name = "tasks")
 @Getter

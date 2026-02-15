@@ -26,6 +26,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.UUID;
 
+/**
+ * @author Степанов Владислав
+ */
 @RestController
 @RequestMapping("/v1/tasks")
 @RequiredArgsConstructor
