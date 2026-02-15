@@ -18,6 +18,8 @@ public interface TaskMapper {
     Task toEntity(TaskDto taskDto);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+    @Mapping(target = "id", ignore = true)
+    @Mapping(target = "status", ignore = true)
     void updateTaskFromDto(TaskPatchDto dto, @MappingTarget Task entity);
 
 }
